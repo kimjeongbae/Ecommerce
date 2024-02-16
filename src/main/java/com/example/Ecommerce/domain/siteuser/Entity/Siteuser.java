@@ -15,8 +15,10 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Siteuser extends BaseEntity {
+    @Column(unique = true)
     private String userid;
     private String password;
+    @Column(unique = true)
     private String nickname;
     private String role;
     @Column(unique = true)
